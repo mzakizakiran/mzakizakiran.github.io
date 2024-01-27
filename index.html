@@ -21,6 +21,11 @@
         background-color: lightgrey;
         transition: all ease-in-out 200ms;
       }
+
+      .animate-hover-scale-project:hover {
+        scale: 1.05;
+        transition: all ease-in-out 200ms;
+      }
     </style>
   </head>
   <body>
@@ -52,13 +57,13 @@
         <div class="w3-dropdown-content w3-round-large w3-bar-block w3-border">
           <button
             class="w3-bar-item w3-round-large w3-button"
-            onclick="openContent('habitatLaut')"
+            onclick="openPage('mobile-project')"
           >
             Mobile
           </button>
           <button
             class="w3-bar-item w3-round-large w3-button"
-            onclick="openContent('habitatDarat')"
+            onclick="openPage('web-project')"
           >
             Web
           </button>
@@ -66,37 +71,110 @@
       </div>
     </div>
 
-    <div
-      class="w3-container w3-animate-opacity menu"
-      id="home"
-      style="display: block; margin: 10%"
-    >
-      <div class="w3-row">
-        <div class="w3-col m8">
-          <img src="assets/img/waving_hand.png" width="60%%" alt="" />
+    <div class="menu" id="home" style="display: block">
+      <div class="w3-container w3-animate-opacity">
+        <div class="w3-container" style="margin-top: 4rem">
+          <div class="w3-row">
+            <div class="w3-col m8">
+              <img src="assets/img/waving_hand.png" width="60%%" alt="" />
+            </div>
+            <div class="w3-col m4">
+              <h1 style="font-weight: bold; font-size: 40px">Hello World!</h1>
+              <p>
+                Welcome to the realm of creativity and innovation. I'm delighted
+                that you've landed on my portfolio page. As a Front End
+                Developer, Mobile Developer, and Tech Enthusiast, I've
+                enthusiastically explored the potential of technology to create
+                captivating digital experiences.
+              </p>
+              <p>
+                Here, you'll discover my journey in delivering compelling
+                designs, responsive mobile development, and my passion for
+                ever-evolving technology. Let's explore my works, delve into
+                projects I've designed and developed.
+              </p>
+              <button
+                class="w3-button w3-blue w3-round-large w3-hover-black"
+                style="transition: ease-in-out 200ms"
+                onclick="openPage('about')"
+              >
+                Explore
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="w3-col m4">
-          <h1>Selamat Datang!</h1>
-          <p>
-            Welcome to the realm of creativity and innovation. I'm delighted
-            that you've landed on my portfolio page. As a Front End Developer,
-            Mobile Developer, and Tech Enthusiast, I've enthusiastically
-            explored the potential of technology to create captivating digital
-            experiences.
+      </div>
+      <hr style="margin-right: 2rem; margin-left: 2rem" />
+
+      <div class="w3-container w3-animate-opacity">
+        <div class="w3-container">
+          <p style="font-size: 28px; font-weight: bold">Projects</p>
+          <p class="w3-text-grey" style="margin-bottom: 2rem">
+            Showcasing my passion for technology, design, and problem-solving
+            through code.
           </p>
-          <p>
-            Here, you'll discover my journey in delivering compelling designs,
-            responsive mobile development, and my passion for ever-evolving
-            technology. Let's explore my works, delve into projects I've
-            designed and developed.
-          </p>
-          <button
-            class="w3-button w3-blue w3-round-large w3-hover-black"
-            style="transition: ease-in-out 200ms"
-            onclick="openPage('about')"
-          >
-            Explore
-          </button>
+          <div class="w3-row">
+            <div
+              class="w3-col m3 w3-card w3-round-large animate-hover-scale-project"
+              style="margin: 0 2rem 2rem 0"
+            >
+              <img
+                src="assets/img/tropisi_mockup.png"
+                class="w3-round-large"
+                width="100%"
+                alt=""
+              />
+              <div class="w3-container">
+                <p style="font-size: 20px; font-weight: bold">Tropisianimal</p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet
+                  inventore deleniti sapiente nostrum quia architecto
+                  repudiandae, magni quae odio veritatis soluta dolorum? Alias
+                  eius ipsam saepe magnam delectus quod nam!
+                </p>
+              </div>
+            </div>
+            <div
+              class="w3-col m3 w3-card w3-round-large animate-hover-scale-project"
+              style="margin: 0 2rem 2rem 0"
+            >
+              <img
+                src="assets/img/reco_mockup.png"
+                class="w3-round-large"
+                width="100%"
+                alt=""
+              />
+              <div class="w3-container">
+                <p style="font-size: 20px; font-weight: bold">Reco</p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet
+                  inventore deleniti sapiente nostrum quia architecto
+                  repudiandae, magni quae odio veritatis soluta dolorum? Alias
+                  eius ipsam saepe magnam delectus quod nam!
+                </p>
+              </div>
+            </div>
+            <div
+              class="w3-col m3 w3-card w3-round-large animate-hover-scale-project"
+              style="margin: 0 2rem 2rem 0"
+            >
+              <img
+                src="assets/img/myspp_mockup.png"
+                class="w3-round-large"
+                width="100%"
+                alt=""
+              />
+              <div class="w3-container">
+                <p style="font-size: 20px; font-weight: bold">MySpp</p>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet
+                  inventore deleniti sapiente nostrum quia architecto
+                  repudiandae, magni quae odio veritatis soluta dolorum? Alias
+                  eius ipsam saepe magnam delectus quod nam!
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -107,10 +185,15 @@
         style="margin: 2rem 0 2rem 0"
       >
         <div class="w3-container">
-          <div class="w3-row" style="padding-left: 3rem">
+          <div class="w3-row">
             <div class="w3-col m2">
               <div class="w3-circle">
-                <img src="assets/img/FOTO2.jpg" width="50%" alt="" />
+                <img
+                  src="assets/img/profile.jpg"
+                  style="margin-left: 4rem"
+                  width="50%"
+                  alt=""
+                />
               </div>
             </div>
             <div class="w3-col m8">
@@ -143,8 +226,8 @@
         style="margin: 2rem 0 2rem 0"
       >
         <div class="w3-container">
-          <div class="w3-container" style="padding: 1rem 0 0 2rem">
-            <h2>Skills</h2>
+          <div class="w3-container">
+            <p style="font-weight: 600; font-size: 28px">Skills</p>
             <p class="w3-text-grey">My programming skills</p>
           </div>
           <div class="w3-row w3-row-padding" style="margin: 2rem 0 2rem 0">
@@ -209,6 +292,95 @@
         </div>
       </div>
     </div>
+
+    <div
+      class="w3-container menu w3-animate-bottom"
+      style="display: none"
+      id="mobile-project"
+    >
+      <div class="w3-container">
+        <p style="font-size: 28px; font-weight: bold">Mobile Projects</p>
+        <p class="w3-text-grey">Thing's that I've build using Flutter</p>
+        <hr />
+        <div class="w3-row">
+          <div
+            class="w3-col m4 w3-card w3-round-large animate-hover-scale-project"
+            style="margin: 0 2rem 2rem 0"
+          >
+            <img
+              src="assets/img/reco_mockup.png"
+              class="w3-round-large"
+              width="100%"
+              alt=""
+            />
+            <div class="w3-container">
+              <p style="font-size: 20px; font-weight: bold">Reco</p>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet
+                inventore deleniti sapiente nostrum quia architecto repudiandae,
+                magni quae odio veritatis soluta dolorum? Alias eius ipsam saepe
+                magnam delectus quod nam!
+              </p>
+            </div>
+          </div>
+          <div
+            class="w3-col m4 w3-card w3-round-large animate-hover-scale-project"
+            style="margin: 0 2rem 2rem 0"
+          >
+            <img
+              src="assets/img/myspp_mockup.png"
+              class="w3-round-large"
+              width="100%"
+              alt=""
+            />
+            <div class="w3-container">
+              <p style="font-size: 20px; font-weight: bold">MySpp</p>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet
+                inventore deleniti sapiente nostrum quia architecto repudiandae,
+                magni quae odio veritatis soluta dolorum? Alias eius ipsam saepe
+                magnam delectus quod nam!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="w3-container menu w3-animate-bottom"
+      style="display: none"
+      id="web-project"
+    >
+      <div class="w3-container">
+        <p style="font-size: 28px; font-weight: bold">Web Projects</p>
+        <p class="w3-text-grey">Just a basic website that I've build.</p>
+        <hr />
+        <div class="w3-row">
+          <div
+            class="w3-col m4 w3-card w3-round-large animate-hover-scale-project"
+            style="margin: 0 2rem 2rem 0"
+          >
+            <img
+              src="assets/img/tropisi_mockup.png"
+              class="w3-round-large"
+              width="100%"
+              alt=""
+            />
+            <div class="w3-container">
+              <p style="font-size: 20px; font-weight: bold">Tropisianimal</p>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet
+                inventore deleniti sapiente nostrum quia architecto repudiandae,
+                magni quae odio veritatis soluta dolorum? Alias eius ipsam saepe
+                magnam delectus quod nam!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <div class="w3-panel w3-blue w3-center w3-text-white" style="margin: 0">
         <div class="w3-container" style="padding: 1rem">
