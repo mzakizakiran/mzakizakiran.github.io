@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 13 | Navigasi</title>
+    <link rel="stylesheet" href="assets/style/w3.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .w3-bar {
+        display: flex;
+        justify-content: center;
+      }
+      .animate-hover-scale:hover {
+        scale: 1.1;
+        background-color: lightgrey;
+        transition: all ease-in-out 200ms;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w3-container" style="margin: 0; padding: 0">
+      <img src="assets/img/banner-zaki.png" width="100%" alt="" />
+    </div>
+    <div class="w3-bar w3-blue" style="padding: 16px">
+      <button
+        class="w3-bar-item w3-button w3-hover-black w3-round-large"
+        style="transition: ease-in-out 200ms"
+        onclick="openPage('home')"
+      >
+        Home
+      </button>
+      <button
+        class="w3-bar-item w3-button w3-hover-black w3-round-large"
+        style="transition: ease-in-out 200ms"
+        onclick="openPage('about')"
+      >
+        About Me
+      </button>
+      <div class="w3-dropdown-hover">
+        <button
+          class="w3-button w3-hover-black w3-round-large"
+          style="transition: ease-in-out 200ms"
+        >
+          My Projects
+        </button>
+        <div class="w3-dropdown-content w3-round-large w3-bar-block w3-border">
+          <button
+            class="w3-bar-item w3-round-large w3-button"
+            onclick="openContent('habitatLaut')"
+          >
+            Mobile
+          </button>
+          <button
+            class="w3-bar-item w3-round-large w3-button"
+            onclick="openContent('habitatDarat')"
+          >
+            Web
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="w3-container w3-animate-opacity menu"
+      id="home"
+      style="display: block; margin: 10%"
+    >
+      <div class="w3-row">
+        <div class="w3-col m8">
+          <img src="assets/img/waving_hand.png" width="60%%" alt="" />
+        </div>
+        <div class="w3-col m4">
+          <h1>Selamat Datang!</h1>
+          <p>
+            Welcome to the realm of creativity and innovation. I'm delighted
+            that you've landed on my portfolio page. As a Front End Developer,
+            Mobile Developer, and Tech Enthusiast, I've enthusiastically
+            explored the potential of technology to create captivating digital
+            experiences.
+          </p>
+          <p>
+            Here, you'll discover my journey in delivering compelling designs,
+            responsive mobile development, and my passion for ever-evolving
+            technology. Let's explore my works, delve into projects I've
+            designed and developed.
+          </p>
+          <button
+            class="w3-button w3-blue w3-round-large w3-hover-black"
+            style="transition: ease-in-out 200ms"
+            onclick="openPage('about')"
+          >
+            Explore
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-container w3-margin menu" style="display: none" id="about">
+      <div
+        class="w3-card-2 w3-round-large w3-animate-zoom"
+        style="margin: 2rem 0 2rem 0"
+      >
+        <div class="w3-container">
+          <div class="w3-row" style="padding-left: 3rem">
+            <div class="w3-col m2">
+              <div class="w3-circle">
+                <img src="assets/img/FOTO2.jpg" width="50%" alt="" />
+              </div>
+            </div>
+            <div class="w3-col m8">
+              <h1><strong>Mohamad Zaki Zakiran</strong></h1>
+              <h2 class="w3-text-grey">10123206 | <span>IF-5</span></h2>
+              <p>
+                Hi! My name is Mohamad Zaki Zakiran. You can call me Zaki. I'm
+                currently student at Universitas Komputer Indonesia, Informatics
+                Engineering.
+              </p>
+              <p>
+                I am interested in being a front end developer, a UI/UX
+                designer, and also an Mobile Developer. I have experience in
+                developing mobile apps using Flutter. I'd also like to develop a
+                website with a framework such as Laravel. I'm proficient in
+                basic website programming languages such as HTML, JavaScript,
+                CSS, and also PHP.
+              </p>
+              <p>
+                I'm using Figma for web design. I can also operate Photoshop and
+                Adobe Illustrator.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="w3-card-2 w3-round-large w3-animate-bottom"
+        style="margin: 2rem 0 2rem 0"
+      >
+        <div class="w3-container">
+          <div class="w3-container" style="padding: 1rem 0 0 2rem">
+            <h2>Skills</h2>
+            <p class="w3-text-grey">My programming skills</p>
+          </div>
+          <div class="w3-row w3-row-padding" style="margin: 2rem 0 2rem 0">
+            <div class="w3-col m2 s6 w3-center" style="padding: 1rem">
+              <div class="w3-container">
+                <div
+                  class="w3-card w3-round-large w3-animate-zoom animate-hover-scale"
+                >
+                  <img src="assets/img/icons8-react-native.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="w3-col m2 s6 w3-center" style="padding: 1rem">
+              <div class="w3-container">
+                <div
+                  class="w3-card w3-round-large w3-animate-zoom animate-hover-scale"
+                >
+                  <img src="assets/img/icons8-javascript.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="w3-col m2 s6 w3-center" style="padding: 1rem">
+              <div class="w3-container">
+                <div
+                  class="w3-card w3-round-large w3-animate-zoom animate-hover-scale"
+                >
+                  <img src="assets/img/icons8-flutter.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="w3-col m2 s6 w3-center" style="padding: 1rem">
+              <div class="w3-container">
+                <div
+                  class="w3-card w3-round-large w3-animate-zoom animate-hover-scale"
+                >
+                  <img
+                    src="assets/img/icons8-google-firebase-console.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="w3-col m2 s6 w3-center" style="padding: 1rem">
+              <div class="w3-container">
+                <div
+                  class="w3-card w3-round-large w3-animate-zoom animate-hover-scale"
+                >
+                  <img src="assets/img/icons8-python.svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="w3-col m2 s6 w3-center" style="padding: 1rem">
+              <div class="w3-container">
+                <div
+                  class="w3-card w3-round-large w3-animate-zoom animate-hover-scale"
+                >
+                  <img src="assets/img/icons8-dart.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="w3-panel w3-blue w3-center w3-text-white" style="margin: 0">
+        <div class="w3-container" style="padding: 1rem">
+          <p>Made with ❤️ | By zakizakiran</p>
+          <div style="display: flex; justify-content: center; gap: 1rem">
+            <a href="https://instagram.com/zakizakiran" target="_blank">
+              <img src="assets/img/icons8-instagram.svg" width="30px" alt="" />
+            </a>
+            <a href="https://github.com/zakizakiran" target="_blank">
+              <img src="assets/img/icons8-github.svg" width="30px" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function openPage(namaPage) {
+        var i;
+        var x = document.getElementsByClassName("menu");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(namaPage).style.display = "block";
+      }
+    </script>
+  </body>
+</html>
